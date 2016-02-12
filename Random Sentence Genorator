@@ -1,0 +1,32 @@
+import java.util.Random;                              // Import
+class Main {
+  public static void main(String[] args) {
+    String[] partOne = new String[5];                 // Array 1
+        partOne[0] = "I need ";
+        partOne[1] = "I ate ";
+        partOne[2] = "I want ";
+        partOne[3] = "I am ";
+        partOne[4] = "Trevor is ";
+  
+    String[] partTwo = new String[5];                 // Array 2
+        partTwo[0] = "a cat"; 
+        partTwo[1] = "a dog";
+        partTwo[2] = "a sandwich";
+        partTwo[3] = "a happy person";
+        partTwo[4] = "Bob";
+      
+      
+     int count = 0;
+     while(count < 11) {
+       Random rand = new Random();                   // Random # Genorator
+        int  n = rand.nextInt(4) + 0;
+        Random randTwo = new Random();                // Random # Genorator 2
+        int  m = randTwo.nextInt(4) + 0; 
+
+     System.out.println(partOne[n] + partTwo[m]);    // Print Line
+      count += 1;
+     }
+     
+  }
+}
+
