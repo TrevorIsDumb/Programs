@@ -1,0 +1,87 @@
+import java.util.Scanner;
+import java.util.Random;
+class Main {
+  public static void main(String[] args) {
+    while(true){
+    System.out.println(" ");
+    System.out.println("Rock, Paper, Or Scissors?");
+    Random rand = new Random();
+    Scanner scan = new Scanner(System.in);	    
+    String input = scan.nextLine();
+    int  n = rand.nextInt(3) + 1;
+    String pull = "pull";
+        if (n == 1) {
+         pull = "Rock";
+        }
+        else if (n == 2) {
+            pull = "Paper";
+        }
+        else if (n == 3) {
+            pull = "Scissors";
+        }
+
+    switch (input.toLowerCase()) {
+        case "rock":
+            System.out.println("The Computer Pulled: " + pull);
+            System.out.println("You Pulled: Rock");
+            if (pull == "Paper") {
+                System.out.println("You Lose");
+                break;
+                
+            }
+            if (pull == "Rock") {
+                System.out.println("You Tied");
+            }
+            else {
+                System.out.println("You Win");
+            }
+            break;
+        case "scissors":
+            System.out.println("The Computer Pulled: " + pull);
+            System.out.println("You Pulled: Scissors");
+            if (pull == "Rock") {
+                System.out.println("You Lose");
+                break;
+            }
+            if (pull == "Scissors") {
+                System.out.println("You Tied");
+            }
+            else {
+                System.out.println("You Win");
+            }
+            break;
+        case "paper":
+            System.out.println("The Computer Pulled: " + pull);
+            System.out.println("You Pulled: Paper");
+            if (pull == "Scissors") {
+                System.out.println("You Lose");
+                break;
+            }
+            if (pull == "Paper") {
+                System.out.println("You Tied");
+            }
+            else {
+                System.out.println("You Win");
+            }
+            break;
+        default:
+            System.out.println("Invalid Entry");
+            break;
+    }
+
+  
+     
+      
+      
+      
+      
+      
+      
+      
+      }
+  }
+}
+
+
+
+
