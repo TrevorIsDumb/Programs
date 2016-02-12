@@ -1,0 +1,60 @@
+import java.util.Scanner;  
+import java.util.Random;
+class Main {
+	public static void main(String[] args) {
+	
+	 System.out.println("How Can I Help You Today?");
+	
+		String[] foods = new String[10];
+		    foods[0] = "Pasta";
+		    foods[1] = "A Cheese Burger";
+		    foods[2] = "Ham";
+		    foods[3] = "Vegetable Soup";
+		    foods[4] = "Turkey";
+		    foods[5] = "A Porkchop";
+		    foods[6] = "Soup";
+		    foods[7] = "Nachos";
+		    foods[8] = "Ice Cream";
+		    foods[9] = "Cake";
+	
+		String[] drink = new String[10];
+		    drink[0] = "Pepsi";
+		    drink[1] = "Coke";
+		    drink[2] = "Apple Juice";
+		    drink[3] = "Orange Juice";
+		    drink[4] = "Ginger Ale";
+		    drink[5] = "Water";
+		    drink[6] = "Grape Juice";
+		    drink[7] = "Cherry Coke";
+		    drink[8] = "Lemonade";
+		    drink[9] = "Iced Tea";
+		    Random rand = new Random();
+		
+        
+	    while (true) {
+        
+        
+        int  n = rand.nextInt(9) + 0;
+            Scanner scan = new Scanner(System.in);	    
+	    	String input = scan.nextLine();
+	    	if (input.equalsIgnoreCase("I am hungry")) {
+		  System.out.println("Here's " + foods[n]);
+	    	}
+			
+			else if (input.equalsIgnoreCase("I am thirsty")) {
+		  System.out.println("Here's " + drink[n]);
+			}
+		    
+		   else if (input.equalsIgnoreCase ("Jacob Cat")) {
+		  System.out.println("Meow Meow Meow Meow :3 Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow :3 Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow :3 Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Tractor Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow :3 Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow :3 Forklift Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow Meow ");
+		    }         
+	        
+	    }
+		
+		
+	}
+}
+
+
+
+
