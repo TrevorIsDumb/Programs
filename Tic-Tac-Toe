@@ -1,0 +1,149 @@
+import java.util.Scanner;
+class Main {
+      
+    static final String GRID_FORMAT = " %c || %c || %c %n" +
+                                      "===||===||===%n" +
+                                      " %c || %c || %c %n" +
+                                      "===||===||===%n" +
+                                      " %c || %c || %c %n";
+                                      
+    static final char BLANK = ' ', X = 'X', O = 'O';
+                                      
+    static void printBoard(char[][] b) {
+        System.out.printf(GRID_FORMAT, b[0][0], b[0][1], b[0][2], b[1][0], b[1][1], b[1][2], b[2][0], b[2][1], b[2][2]);
+    }
+                        
+    public static void main(String[] args) {
+                                      
+        char[][] board = { {BLANK, ' ', ' '}, {' ', ' ', ' '}, {' ', ' ', ' '} };
+        printBoard(board);
+        System.out.println();
+   
+    Scanner scan = new Scanner(System.in);
+    String turnOne = new String();
+    turnOne = " ";
+         
+        
+        String input = scan.nextLine();   
+   
+  
+   int count = 1;
+   
+       while (true) {
+       if (count == 1) {
+       System.out.println("Where would you like to place an \"O\"?");
+        switch (input.toLowerCase()) {
+            case "tleft":  
+                 board[0][0] = 'O';
+                 printBoard(board);
+                 count *= -1;
+                 turnOne = "tleft";
+                 break;
+            case "tmid":
+                 board[0][1] = 'O';
+                 printBoard(board);
+                 count *= -1;
+                 turnOne = "tmid";
+                 break;
+            case "tright":
+                 board[0][2] = 'O';
+                 printBoard(board);
+                 count *= -1;
+                 turnOne = "tright";
+                 break;
+            case "left":
+                 board[1][0] = 'O';
+                 printBoard(board);
+                 count *= -1;;
+                 turnOne = "left";
+                 break;
+            case "mid":
+                board[1][1] = 'O';
+                 printBoard(board);
+                count *= -1;
+                turnOne = "tleft";
+                break;
+            case "right":
+                board[1][2] = 'O';
+                 printBoard(board);
+                 count *= -1;
+                 break;
+            case "bleft":
+               board[2][0] = 'O';
+                 printBoard(board);
+                 count *= -1;
+                 break;
+            case "bmid":
+                board[2][1] = 'O';
+                 printBoard(board);
+                 count *= -1;
+                 break;
+            case "bright":
+                board[2][2] = 'O';
+                 printBoard(board);
+                 count *= -1;
+                 break;
+        }
+       }
+        if (count == -1) {
+      
+        System.out.println("Where would you like to place an \"X\"?");
+        input = " ";
+        input = scan.nextLine();
+       
+        switch (input.toLowerCase()) {
+            case "tleft":  
+                 board[0][0] = 'X';
+                 printBoard(board);
+                 count *= -1;
+                 break;
+            case "tmid":
+                 board[0][1] = 'X';
+                 printBoard(board);
+                 count *= -1;
+                 break;
+            case "tright":
+                 board[0][2] = 'X';
+                 printBoard(board);
+                 count *= -1;
+                 break;
+            case "left":
+                 board[1][0] = 'X';
+                 printBoard(board);
+                 count *= -1;
+                 break;
+            case "mid":
+                board[1][1] = 'X';
+                 printBoard(board);
+                 count *= -1;
+                 break;
+            case "right":
+                board[1][2] = 'X';
+                 printBoard(board);
+                 count *= -1;
+                 break;
+            case "bleft":
+                board[2][0] = 'X';
+                 printBoard(board);
+                 count *= -1;
+                 break;
+            case "bmid":
+                board[2][1] = 'X';
+                 printBoard(board);
+                 count *= -1;
+                 break;
+            case "bright":
+                board[2][2] = 'X';
+                 printBoard(board);
+                 count *= -1;
+                 break;    
+            
+        }
+        }
+       }
+
+   
+  
+  }
+}
+
